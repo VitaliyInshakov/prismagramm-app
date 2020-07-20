@@ -10,6 +10,8 @@
   "dependencies": {
     "@expo/vector-icons": "^10.2.0",
     "apollo-boost": "^0.4.9",
+    "apollo-cache-inmemory": "^1.6.6",
+    "apollo-cache-persist": "^0.1.1",
     "expo": "~38.0.8",
     "expo-asset": "~8.1.7",
     "expo-font": "~8.2.1",
