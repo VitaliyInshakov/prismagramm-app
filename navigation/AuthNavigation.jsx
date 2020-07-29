@@ -7,9 +7,9 @@ import Confirm from "../screens/Auth/Confirm";
 
 const AuthNavigation = createStackNavigator({
     Login,
+    Confirm,
     AuthHome,
     SignUp,
-    Confirm,
 }, {
     headerMode: "none",
 });
