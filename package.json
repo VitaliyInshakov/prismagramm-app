@@ -16,6 +16,7 @@
     "apollo-cache-persist": "^0.1.1",
     "expo": "~38.0.8",
     "expo-asset": "~8.1.7",
+    "expo-facebook": "~8.2.1",
     "expo-font": "~8.2.1",
     "expo-status-bar": "^1.0.2",
     "graphql": "^15.3.0",
