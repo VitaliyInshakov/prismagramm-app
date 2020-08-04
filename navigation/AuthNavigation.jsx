@@ -14,4 +14,4 @@ const AuthNavigation = createStackNavigator({
     headerMode: "none",
 });
 
-export  default createAppContainer(AuthNavigation);
+export default createAppContainer(AuthNavigation);
