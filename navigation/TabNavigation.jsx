@@ -23,8 +23,8 @@ const stackFactory = (initialRoute, customConfig) => createStackNavigator({
 export default createBottomTabNavigator({
     Home: {
         screen: stackFactory(Home, {
-            headerRight: <MessagesLink/>,
-            headerTitle: <NavIcon name="logo-instagram" size={36} />
+            headerRight: () => <MessagesLink/>,
+            headerTitle: () => <NavIcon name="logo-instagram" size={36} />
         }),
         navigationOptions: {
             tabBarIcon: ({ focused }) => (
@@ -55,8 +55,12 @@ export default createBottomTabNavigator({
             tabBarIcon: ({ focused }) => (
                 <NavIcon
                     focused={focused}
-                    size={28}
-                    name={Platform.OS === "ios" ? "ios-add" : "md-add"}
+                    size={32}
+                    name={
+                        Platform.OS === "ios"
+                            ? "ios-add-circle-outline"
+                            : "md-add-circle-outline"
+                    }
                 />
             )
         }

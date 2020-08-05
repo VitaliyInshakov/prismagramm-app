@@ -4,20 +4,13 @@ import styled from "styled-components/native";
 import { useQuery } from "react-apollo-hooks";
 import { gql } from "apollo-boost";
 import Loader from "../../components/Loader";
-
-const View = styled.View`
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-`;
-
-const Text = styled.Text``;
+import Post from "../../components/Post";
 
 const FEED_QUERY = gql`
     {
         seeFeed {
             id
-            location
+            locations
             caption
             user {
                 id
@@ -64,7 +57,13 @@ export default () => {
                 <RefreshControl refreshing={refreshing} onRefresh={refresh} />
             }
         >
-            {loading ? <Loader /> : <Text>Hello</Text>}
+            {loading ? (
+                <Loader />
+            ) : (
+                data &&
+                data.seeFeed &&
+                data.seeFeed.map(post => <Post key={post.id} {...post} />)
+            )}
         </ScrollView>
     );
 };
